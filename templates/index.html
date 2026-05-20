@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Score Predictor</title>
+
+    <style>
+        body{
+            background:#121212;
+            color:white;
+            font-family:Arial;
+            text-align:center;
+            padding-top:50px;
+        }
+
+        input{
+            width:250px;
+            padding:10px;
+            margin:10px;
+            border:none;
+            border-radius:5px;
+        }
+
+        button{
+            padding:10px 20px;
+            background:#00c853;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:16px;
+        }
+
+        h1{
+            color:#00e676;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Exam Score Predictor</h1>
+
+    <form method="POST">
+
+        <input type="number" step="any" name="study"
+        placeholder="Study Hours"><br>
+
+        <input type="number" step="any" name="attendance"
+        placeholder="Attendance Percentage"><br>
+
+        <input type="number" step="any" name="sleep"
+        placeholder="Sleep Hours"><br>
+
+        <input type="number" step="any" name="mental"
+        placeholder="Mental Health Rating"><br>
+
+        <button type="submit">Predict Score</button>
+
+    </form>
+
+    {% if prediction %}
+        <h2>Predicted Exam Score: {{ prediction }}</h2>
+    {% endif %}
+
+</body>
+</html>
